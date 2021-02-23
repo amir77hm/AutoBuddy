@@ -1,0 +1,186 @@
+@import "media";
+
+// general style
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  font-family: "Dosis" sans-serif;
+  line-height: 1.6;
+}
+
+// utility styles
+#container {
+  max-width: 1100px;
+  padding: 0 2rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+%btn-shared {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  transition: all 1s ease-in;
+  border: none;
+  cursor: pointer;
+}
+
+.lead {
+  font-size: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+// custom style
+#header #container {
+  height: 90vh;
+}
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+
+  .menu ul {
+    display: flex;
+    transform: translateX(2rem);
+
+    li {
+      margin: 0.5rem 1rem;
+
+      a {
+        font-size: 0.7rem;
+        transition: color 100ms;
+        font-weight: 600;
+
+        &:hover {
+          color: blue;
+        }
+
+        &.current {
+          color: blue;
+        }
+
+        & i {
+          font-size: 0.6rem;
+          vertical-align: -1px;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+
+  .authentication ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      margin: 0.5rem 0.5rem;
+
+      a {
+        font-size: 0.7rem;
+        font-weight: 600;
+        transition: all ease-in 400ms !important;
+
+        &:hover {
+          color: blue;
+        }
+
+        &.btn {
+          color: #fff;
+          @extend %btn-shared;
+          background-color: rgb(0, 168, 173);
+          border-radius: 2rem;
+
+          &:hover {
+            background-color: rgba(0, 168, 173, 0.6);
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  & h1 {
+    font-size: 0.7rem;
+    color: blue;
+
+    & span {
+      font-size: 1rem;
+      color: orange;
+      vertical-align: -1px;
+      margin-right: 2px;
+    }
+  }
+}
+
+.showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  &-image {
+    text-align: center;
+    flex: 1;
+    // width: 90%;
+    // height: 90%;
+    transform: translateX(3rem);
+  }
+
+  &-content {
+    flex: 1;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    a.btn {
+      @extend %btn-shared;
+      color: #fff;
+      background-color: rgb(0, 168, 173);
+      border-radius: 2rem;
+      transition: all 1s !important;
+
+      &:hover {
+        background-color: rgba(0, 168, 173, 0.6);
+        color: black;
+      }
+    }
+  }
+}
+
+// section1
+#HowItWorks {
+  text-align: center;
+
+  p {
+    color: orange;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}
